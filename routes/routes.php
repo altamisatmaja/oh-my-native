@@ -3,7 +3,7 @@
 class Routes {
     public function run () {
         $router = new App();
-        $router->setDefaultController('Controller');
+        $router->setDefaultController('HomeController');
         $router->setDefaultMethod('index');
 
         $router->get('/example', ['ExampleController', 'index']);

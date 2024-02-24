@@ -1,8 +1,8 @@
 <?php 
 
-class ExampleController {
+class ExampleController extends Controller {
     public function index() {
-        echo "Hello World from example index";
+        $this->view('pages/example');
     }
 
     public function create($params1 = 1, $params2 = 2) {
