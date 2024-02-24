@@ -1,9 +1,9 @@
+## Tentang OhMyNative
+
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
-
-## Tentang OhMyNative
 
 Made because of the hassle in PWEB class where they make us use PHP Native instead of Laravel. So, here's like a mini version of Laravel, you know, to keep it chill. 🌾🤩
 
@@ -14,6 +14,6 @@ Made because of the hassle in PWEB class where they make us use PHP Native inste
 3. Run `npm i` in your terminal
 4. Execute `npm run artisan` to watch `TailwindCSS`
 
-
 ## Documentation Dev Dependencies
-<a href="https://tailwindcss.com/docs/installation">TailwindCSS</a>
+
+<a href="https://tailwindcss.com/docs/installation"><img src"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png"></a>
