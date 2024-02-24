@@ -1,5 +1,5 @@
 
-<img src"https://raw.githubusercontent.com/altamisatmaja/oh-my-native/79a656a4a2f6413e7a80e69c66109a5f7174b9b1/public/assets/icons/ohmynative.svg" alt ="OhMyNative">
+<a href="https://github.com/altamisatmaja/oh-my-native"><img src="https://raw.githubusercontent.com/altamisatmaja/oh-my-native/79a656a4a2f6413e7a80e69c66109a5f7174b9b1/public/assets/icons/ohmynative.svg" alt="Build Status"></a>
 
 ## Tentang OhMyNative
 
