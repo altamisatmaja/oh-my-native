@@ -12,7 +12,7 @@
 
 <body>
     <div class="bg-[#D2544F] py-10 sm:py-10">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl max-h-screen px-6 lg:px-8">
             <div class="mx-auto max-w-2xl sm:text-center">
                 <img src="<?= BASE_URL . '/public/assets/icons/ohmynative.svg' ?>" alt="ohmynative">
                 <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Simple and Useable 🤩</h2>

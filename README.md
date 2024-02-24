@@ -19,4 +19,4 @@ Made because of the hassle in PWEB class where they make us use PHP Native inste
 
 
 ## Documentation Dev Dependencies
-<a href="https://tailwindcss.com/docs/installation"></a>
+<a href="https://tailwindcss.com/docs/installation">TailwindCSS</a>
