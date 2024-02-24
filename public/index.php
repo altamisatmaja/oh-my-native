@@ -1,3 +1,3 @@
 <?php
 
-require_once '../views/index.blade.php';
+require_once '../src/index.blade.php';

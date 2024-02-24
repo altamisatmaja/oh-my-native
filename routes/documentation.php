@@ -1,4 +1,7 @@
-<?php
+<!-- BASE OF ROUTE  -->
+
+
+<!-- <?php
 
 class Routes
 {
@@ -39,3 +42,5 @@ class Routes
         return $url;
     }
 }
+
+?> -->
