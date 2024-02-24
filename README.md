@@ -16,4 +16,5 @@ Made because of the hassle in PWEB class where they make us use PHP Native inste
 
 ## Documentation Dev Dependencies
 
-<a href="https://tailwindcss.com/docs/installation"><img src"https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt ="tailwindcss"></a>
+<!-- <a href="https://tailwindcss.com/docs/installation"><img src"https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt ="tailwindcss"></a> -->
+<a href="https://tailwindcss.com/docs/installation"><img width="512" alt="Tailwind CSS Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/512px-Tailwind_CSS_Logo.svg.png">TailwindCSS</a>

@@ -5,7 +5,7 @@ class HomeController extends Controller
     public function index()
     {
         $data = [
-            'title' => 'Welcome',
+            'title' => 'OhMyNative',
         ];
         $this->view('pages/welcome', $data);
     }
