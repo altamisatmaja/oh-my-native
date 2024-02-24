@@ -1,5 +1,5 @@
 
-<img src"public/assets/icons/ohmynative.svg" alt ="OhMyNative">
+<img src"https://raw.githubusercontent.com/altamisatmaja/oh-my-native/79a656a4a2f6413e7a80e69c66109a5f7174b9b1/public/assets/icons/ohmynative.svg" alt ="OhMyNative">
 
 ## Tentang OhMyNative
 
@@ -13,9 +13,10 @@ Made because of the hassle in PWEB class where they make us use PHP Native inste
 ## Cara pakai?
 
 1. Navigate to your directory `XAMPP/htdocs/`
-2. Clone this repository by typing `https://github.com/altamisatmaja/oh-my-native.git`
-3. Run `npm i` in your terminal
-4. Execute `npm run artisan` to watch `TailwindCSS`
+2. Clone this repository by typing `git clone https://github.com/altamisatmaja/oh-my-native.git`
+3. Don't forget to change `BASE_URL` in `config/config.php`
+4. Run `npm i` in your terminal
+5. Execute `npm run artisan` to watch `TailwindCSS`
 
 
 ## Documentation Dev Dependencies
