@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="<?= BASE_URL . '/public/css/output.css' ?>" rel="stylesheet">
     <title><?= $title ?></title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -83,6 +84,8 @@
                             </p>
                             <a target="_blank" href="https://github.com/altamisatmaja/oh-my-native"
                                 class="mt-10 block w-full rounded-md ring-1 ring-gray-200 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">Clone</a>
+                            <a href="<?= BASE_URL . '/form' ?>"
+                                class="mt-10 block w-full rounded-md ring-1 ring-gray-200 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">Form</a>
                             <p class="mt-6 text-xs leading-5 text-white">Got any problems or requests? Just hit up the
                                 issues section and drop it there, no stress! 👋
                             </p>
@@ -92,6 +95,7 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </body>
 
 </html>
