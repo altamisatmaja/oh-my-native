@@ -8,13 +8,7 @@ class Controller
             extract($data);
         }
 
-        $viewPath = '../views/' . $view . '.blade.php';
-        
-        if (file_exists($viewPath)) {
-            require_once $viewPath;
-        } else {
-            die('View file not found.');
-        }
+        require_once '../views/' . $view . '.blade.php';
     }
 
     public function redirect($url)
@@ -25,15 +19,7 @@ class Controller
 
     public function model($model)
     {
-        $modelPath = '../app/models/' . $model . '.php';
-        // var_dump($modelPath);
-
-        if (file_exists($modelPath)) {
-            // echo "File ada";
-            require_once $modelPath;
-            return new $model;
-        } else {
-            die('Model file not found.');
-        }
+        require_once '../app/models/' . $model . '.php';
+        return new $model;
     }
 }

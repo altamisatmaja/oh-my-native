@@ -18,6 +18,8 @@ class Routes {
 
 
         $router->get('/form', ['FormController', 'index']);
+        $router->get('/form/index', ['FormController', 'index']);
+        
 
         $router->run();
     }

@@ -1,24 +1,26 @@
 <?php
 
+
 class FormController extends Controller
 {
-    private $formModel;
+    private $formModels;
 
     public function __construct()
     {
-        var_dump($this->formModel);
-        $this->formModel = $this->model('FormModel');
+        $this->formModels = $this->model('FormModels');
     }
 
     public function index()
     {
         $data = [
             'title' => 'Saham',
-            'getAllForm' => $this->formModel->getAll()
+            'AllBarang' => $this->formModels->getAlls()
         ];
 
-        echo "Koneksi database berhasil!";
+        $this->view('pages/form', $data);
+    }
 
-        return $this->view('pages/form', $data);
+    public function edit($ed, $ia) {
+        echo "edit $ed, adada $ia";
     }
 }

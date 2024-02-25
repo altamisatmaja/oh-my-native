@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <?= $getAllForm ?>
+    <?php var_dump($AllBarang);?>
     <div class="flex items-center justify-center p-12">
         <div class="mx-auto w-full max-w-[550px]">
             <form action="https://formbold.com/s/FORM_ID" method="POST">
