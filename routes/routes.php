@@ -17,8 +17,9 @@ class Routes {
         $router->get('/dashboard/index', ['AdminController', 'index']);
 
 
-        $router->get('/form', ['FormController', 'index']);
-        $router->get('/form/index', ['FormController', 'index']);
+        $router->get('/crud', ['FormController', 'index']);
+        $router->get('/crud/index', ['FormController', 'index']);
+        $router->get('/crud/insert', ['FormController', 'insert']);
         
 
         $router->run();

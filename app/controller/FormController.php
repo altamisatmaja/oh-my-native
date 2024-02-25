@@ -14,13 +14,17 @@ class FormController extends Controller
     {
         $data = [
             'title' => 'Saham',
-            'AllBarang' => $this->formModels->getAlls()
+            'sahamAll' => $this->formModels->getAlls()
         ];
 
-        $this->view('pages/form', $data);
+        $this->view('pages/crud_pages/main', $data);
     }
 
-    public function edit($ed, $ia) {
-        echo "edit $ed, adada $ia";
+    public function insert() {
+        $data = [
+            'title' => 'Saham',
+        ];
+
+        $this->view('pages/crud_pages/insert', $data);
     }
 }

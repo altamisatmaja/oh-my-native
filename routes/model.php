@@ -26,10 +26,10 @@ class Model
         }
     }
 
-    public function qry($query, $parameters = array())
+    public function qry($query, $parameter = array())
     {
         $stmt = $this->conn->prepare($query);
-        $stmt->execute($parameters);
+        $stmt->execute($parameter);
         return $stmt;
     }
 }

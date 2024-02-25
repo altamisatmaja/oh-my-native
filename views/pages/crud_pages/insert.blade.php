@@ -5,46 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>OhMyNative | Form</title>
     <link href="<?= BASE_URL . '/public/css/output.css' ?>" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Create</title>
 </head>
 
 <body>
-    <?php var_dump($AllBarang);?>
     <div class="flex items-center justify-center p-12">
         <div class="mx-auto w-full max-w-[550px]">
-            <form action="https://formbold.com/s/FORM_ID" method="POST">
+            <form action="<?= BASE_URL . '/crud/insert' ?>" method="POST">
                 <div class="mb-5">
-                    <label for="name" class="mb-3 block text-base font-medium text-[#07074D]">
-                        Full Name
+                    <label for="nama_barang" class="mb-3 block text-base font-medium text-[#07074D]">
+                        Nama saham
                     </label>
-                    <input type="text" name="name" id="name" placeholder="Full Name"
+                    <input type="text" name="nama_barang" id="nama_barang" placeholder="Nama saham"
                         class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                 </div>
                 <div class="mb-5">
-                    <label for="email" class="mb-3 block text-base font-medium text-[#07074D]">
-                        Email Address
+                    <label for="jumlah" class="mb-3 block text-base font-medium text-[#07074D]">
+                        Jumlah
                     </label>
-                    <input type="email" name="email" id="email" placeholder="example@domain.com"
+                    <input type="number" name="jumlah" id="jumlah" placeholder="Jumlah lot"
                         class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                 </div>
                 <div class="mb-5">
-                    <label for="subject" class="mb-3 block text-base font-medium text-[#07074D]">
-                        Subject
+                    <label for="harga_satuan" class="mb-3 block text-base font-medium text-[#07074D]">
+                        Harga
                     </label>
-                    <input type="text" name="subject" id="subject" placeholder="Enter your subject"
+                    <input type="number" name="harga_satuan" id="harga_satuan" placeholder="Harga"
                         class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                 </div>
                 <div class="mb-5">
-                    <label for="message" class="mb-3 block text-base font-medium text-[#07074D]">
-                        Message
+                    <label for="kadaluarsa" class="mb-3 block text-base font-medium text-[#07074D]">
+                        Tanggal jual
                     </label>
-                    <textarea rows="4" name="message" id="message" placeholder="Type your message"
-                        class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"></textarea>
+                    <input type="date" name="kadaluarsa" id="kadaluarsa"
+                        placeholder="<?php
+                        $currentDateTime = date('Y-m-d H:i:s');
+                        echo $currentDateTime;
+                        ?>
+                    "
+                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                 </div>
                 <div>
-                    <button
+                    <button type="submit"
                         class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none">
                         Submit
                     </button>
