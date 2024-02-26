@@ -12,7 +12,7 @@
 <body>
     <div class="flex items-center justify-center p-12">
         <div class="mx-auto w-full max-w-[550px]">
-            <form action="<?= BASE_URL . '/crud/insert' ?>" method="POST">
+            <form action="<?= BASE_URL . '/crud/insert_saham' ?>" method="POST">
                 <div class="mb-5">
                     <label for="nama_barang" class="mb-3 block text-base font-medium text-[#07074D]">
                         Nama saham
