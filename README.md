@@ -10,6 +10,64 @@
 
 Made because of the hassle in PWEB class where they make us use PHP Native instead of Laravel. So, here's like a mini version of Laravel, you know, to keep it chill. 🌾🤩
 
+
+## 🗂️ OhMyNative Folder Structure
+
+```bash
+<Main Repository>
+.
+├── .github/ ISSU_TEMPLATE               
+├── .vscode/                
+│   └── settings.json
+├── app/                
+│   ├── controller/         
+│   │   ├── YOUR_CONTROLLER.php
+│   │   └── YOUR_CONTROLLER.php
+│   └── models/         
+│       ├── YOUR_MODEL.php
+│       └── YOUR_MODEL.php
+├── config/       
+│   ├── gitignore
+│   ├── config.php
+│   └── config.properties   
+├── config/       
+│   └── YOUR_DATABASE.sql
+├── public/                
+│   ├── assets/         
+│   │   ├── YOUR_CONTROLLER.php
+│   │   └── YOUR_CONTROLLER.php
+│   │   css/         
+│   │  ├── YOUR_MODEL.php
+│   │  └── YOUR_MODEL.php
+│   ├── .htaccess
+│   ├── icons.svg
+│   └── index.php
+├── routes/       
+│   ├── app.php
+│   ├── contoller.php
+│   ├── documentation.php   
+│   ├── filter.php
+│   ├── model.php
+│   ├── routes.php
+│   ├── sanitization.php   
+│   └── web.php   
+├── routes/       
+│   └── YOUR_VIEWS.php   
+├── .env
+├── .env.example
+├── .gitignore
+├── .htaccess
+├── LICENSE   
+├── package-lock-json
+├── package.json
+├── postcss.config.js
+├── README.md
+├── SECURITY.md
+└── tailwindcss.config.js
+
+```
+
+
 ## Cara pakai?
 
 1. Navigate to your directory `XAMPP/htdocs/`
