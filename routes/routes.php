@@ -20,8 +20,8 @@ class Routes {
         $router->get('/crud', ['FormController', 'index']);
         $router->get('/crud/index', ['FormController', 'index']);
         $router->get('/crud/insert', ['FormController', 'insert']);
+        $router->post('/crud/insert_saham', ['FormController', 'insert_saham']);
         
-
         $router->run();
     }
 }
