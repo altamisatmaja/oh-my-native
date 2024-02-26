@@ -6,20 +6,24 @@ class Sanitization
         'string' => FILTER_SANITIZE_SPECIAL_CHARS,
         'string[]' => [
             'filter' => FILTER_SANITIZE_SPECIAL_CHARS,
-            'flogs' => FILTER_REQUIRE_ARRAY,
+            'flags' => FILTER_REQUIRE_ARRAY,
         ],
         'email' => FILTER_SANITIZE_EMAIL,
         'int' => [
             'filter' => FILTER_SANITIZE_NUMBER_INT,
-            'flogs' => FILTER_REQUIRE_ARRAY,
+            'flags' => FILTER_REQUIRE_SCALAR,
+        ],
+        'int[]' => [
+            'filter' => FILTER_SANITIZE_NUMBER_INT,
+            'flags' => FILTER_REQUIRE_ARRAY,
         ],
         'float' => [
             'filter' => FILTER_SANITIZE_NUMBER_FLOAT,
-            'flogs' => FILTER_FLAG_ALLOW_FRACTION,
+            'flags' => FILTER_FLAG_ALLOW_FRACTION,
         ],
         'float[]' => [
             'filter' => FILTER_SANITIZE_NUMBER_FLOAT,
-            'flogs' => FILTER_REQUIRE_ARRAY,
+            'flags' => FILTER_REQUIRE_ARRAY,
         ],
         'url' => FILTER_SANITIZE_URL,
     ];
@@ -38,20 +42,20 @@ class Sanitization
     }
 
     public function sanitize(
-        array $inputs, 
+        array $inputs,
         array $fields = [],
         int $default_filter = FILTER_SANITIZE_SPECIAL_CHARS,
         array $filters = self::FILTERS,
         bool $trim = true
-        ): array {
+    ): array {
         if ($fields) {
-            foreach ($fields as $key => $fields) {
-                if ($fields == 'string') {
+            foreach ($fields as $key => $field) {
+                if ($field == 'string') {
                     $tempvar = strip_tags($inputs[$key]);
                     $inputs[$key] = $tempvar;
                 }
             }
-            $options = array_map(fn($fields) => $filters[trim($fields)], $fields);
+            $options = array_map(fn($field) => $filters[trim($field)], $fields);
             $data = filter_var_array($inputs, $options);
         } else {
             $data = filter_var_array($inputs, $default_filter);

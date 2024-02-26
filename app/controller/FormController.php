@@ -39,6 +39,8 @@ class FormController extends Controller
 
         $message = [];
         [$inputs] = $this->filter($_POST, $fields, $message);
+        echo '<pre>';
         var_dump($inputs);
+        echo '</pre>';
     }
 }
