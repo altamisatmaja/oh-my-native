@@ -16,7 +16,9 @@ class Filter
         }
         $sanitize = new Sanitization();
         $inputs = $sanitize->sanitize($data, $sanitization);
+        $validate = new Validation();
+        $errors = $validate->validate($inputs, $validation, $message);
 
-        return [$inputs];
+        return [$inputs, $errors];
     }
 }

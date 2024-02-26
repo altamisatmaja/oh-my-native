@@ -10,7 +10,7 @@ class Validation
         'between' => '%s harus diantara %d hingga %d karakter',
         'same' => '%s dan %s tidak sama',
         'alphanumeric' => '%s harus diikuti huruf dan angka',
-        'secure' => '%s jumlah diantara 8 dan 16 karakter dan ada angka, huruf besar, huruf kecil, dan karakter spesial',
+        'secure' => '%s jumlah diantara 8 dan 64 karakter dan ada angka, huruf besar, huruf kecil, dan karakter spesial',
         'unique' => '%s sudah ada',
     ];
 
@@ -102,5 +102,32 @@ class Validation
         return false;
     }
 
-    
+    public function is_alphanumeric(array $data, string $field): bool
+    {
+        if (!isset($data[$field])) {
+            return true;
+        }
+
+        return ctype_alnum($data[$field]);
+    }
+
+    public function is_secure(array $data, string $field): bool
+    {
+        if (!isset($data[$field])) {
+            return true;
+        }
+
+        $pattern = '#.*^(?=.{8, 64})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*S#';
+        return preg_match($pattern, $data[$field]);
+    }
+
+    public function is_unique(array $data, string $field, string $table, string $column): bool
+    {
+        if (!isset($data[$field])) {
+            return true;
+        }
+
+        // BELUM ADA PENGECEKAN DI DATABASE
+        return false;
+    }
 }

@@ -31,16 +31,28 @@ class FormController extends Controller
     public function insert_saham()
     {
         $fields = [
-            'nama_barang' => 'string',
-            'jumlah' => 'int',
-            'harga_satuan' => 'float',
+            'nama_barang' => 'string | required | alphanumeric | between: 0, 5',
+            'jumlah' => 'int | required',
+            'harga_satuan' => 'float | required',
             'kadaluarsa' => 'string',
         ];
 
-        $message = [];
-        [$inputs] = $this->filter($_POST, $fields, $message);
+        $message = [
+            'nama_barang' => [
+                'required' => "Nama saham harus diisi",
+                'alphanumeric' => "Nama saham harus huruf dan angka",
+                'between' => 'Nama saham harus ticker nya, diantara 0 hingga 5',
+            ],
+            'jumlah' => [
+                'required' => "Jumlah harus diisi",
+            ],
+            'harga_satuan' => [
+                'required' => "Harga lot harus diisi",
+            ],
+        ];
+        [$inputs, $errors] = $this->filter($_POST, $fields, $message);
         echo '<pre>';
-        var_dump($inputs);
+        var_dump($errors);
         echo '</pre>';
     }
 }

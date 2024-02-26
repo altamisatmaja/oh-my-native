@@ -50,6 +50,7 @@ Made because of the hassle in PWEB class where they make us use PHP Native inste
 │   ├── model.php
 │   ├── routes.php
 │   ├── sanitization.php   
+│   ├── validation.php   
 │   └── web.php   
 ├── routes/       
 │   └── YOUR_VIEWS.php   
