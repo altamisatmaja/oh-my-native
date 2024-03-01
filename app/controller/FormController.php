@@ -50,9 +50,12 @@ class FormController extends Controller
                 'required' => "Harga lot harus diisi",
             ],
         ];
+
         [$inputs, $errors] = $this->filter($_POST, $fields, $message);
-        echo '<pre>';
-        var_dump($errors);
-        echo '</pre>';
+
+        if($errors){
+            Message::setFlash('error', 'Data gagal ditambahkan', $errors[0], $inputs);
+            $this->redirect('crud/insert');
+        }
     }
 }

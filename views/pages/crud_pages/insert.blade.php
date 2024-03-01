@@ -1,3 +1,21 @@
+<?php
+$data = Message::getData();
+$namaBarang = '';
+$jumlah = '';
+$harga = '';
+$kadaluarsa = '';
+
+if ($data) {
+    $namaBarang = $data['nama_barang'];
+    $jumlah = $data['jumlah'];
+    $harga = $data['harga_satuan'];
+    $kadaluarsa = $data['kadaluarsa'];
+}
+
+Message::flash();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,13 +36,14 @@
                         Nama saham
                     </label>
                     <input type="text" name="nama_barang" id="nama_barang" placeholder="Nama saham"
+                        value="<?= $namaBarang ?>"
                         class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                 </div>
                 <div class="mb-5">
                     <label for="jumlah" class="mb-3 block text-base font-medium text-[#07074D]">
                         Jumlah
                     </label>
-                    <input type="number" name="jumlah" id="jumlah" placeholder="Jumlah lot"
+                    <input type="number" name="jumlah" id="jumlah" placeholder="Jumlah lot" value="<?= $jumlah ?>"
                         class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                 </div>
                 <div class="mb-5">
@@ -32,13 +51,14 @@
                         Harga
                     </label>
                     <input type="number" name="harga_satuan" id="harga_satuan" placeholder="Harga"
+                        value="<?= $harga ?>"
                         class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                 </div>
                 <div class="mb-5">
                     <label for="kadaluarsa" class="mb-3 block text-base font-medium text-[#07074D]">
                         Tanggal jual
                     </label>
-                    <input type="date" name="kadaluarsa" id="kadaluarsa"
+                    <input type="date" name="kadaluarsa" id="kadaluarsa" value="<?= $kadaluarsa ?>"
                         placeholder="<?php
                         $currentDateTime = date('Y-m-d H:i:s');
                         echo $currentDateTime;
@@ -55,6 +75,7 @@
             </form>
         </div>
     </div>
+    <script src="sweetalert2.all.min.js"></script>
 </body>
 
 </html>
