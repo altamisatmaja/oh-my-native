@@ -75,6 +75,15 @@ Message::flash();
             </form>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var form = document.querySelector('form');
+            form.addEventListener("submit", function() {
+                var submitButton = form.querySelector('button[type="submit"]');
+                submitButton.disabled = true;
+            });
+        });
+    </script>    
     <script src="sweetalert2.all.min.js"></script>
 </body>
 

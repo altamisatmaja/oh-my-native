@@ -53,9 +53,19 @@ class FormController extends Controller
 
         [$inputs, $errors] = $this->filter($_POST, $fields, $message);
 
+        if(($inputs['kadaluarsa']) == ""){
+            $inputs['kadaluarsa'] = NULL;
+        } 
+
         if($errors){
             Message::setFlash('error', 'Data gagal ditambahkan', $errors[0], $inputs);
             $this->redirect('crud/insert');
+        }
+
+        $proc = $this->formModels->insert($inputs);
+        if($proc){
+            Message::setFlash('success', 'Berhasil!', 'Data berhasil ditambahkan', $inputs);
+            $this->redirect('crud');
         }
     }
 }
