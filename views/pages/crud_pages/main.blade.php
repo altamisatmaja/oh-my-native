@@ -1,3 +1,7 @@
+<?php
+Message::flash();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

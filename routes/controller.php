@@ -13,7 +13,7 @@ class Controller extends Filter
 
     public function redirect($url)
     {
-        header('Location: ' . $url);
+        header('Location: ' . BASE_URL . '/' . $url);
         exit;
     }
 

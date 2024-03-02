@@ -94,6 +94,7 @@
     "strip-ansi-cjs": "^6.0.1",
     "sucrase": "^3.35.0",
     "supports-preserve-symlinks-flag": "^1.0.0",
+    "sweetalert2": "^11.10.5",
     "thenify": "^3.3.1",
     "thenify-all": "^1.6.0",
     "to-regex-range": "^5.0.1",
@@ -107,7 +108,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "artisan" : "npx tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch"
+    "artisan": "npx tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch"
   },
   "author": "Altamis Fattah Atmaja",
   "license": "MIT",
