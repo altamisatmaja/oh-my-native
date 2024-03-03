@@ -23,4 +23,10 @@ class FormModels extends Model
             $data['kadaluarsa'],
         ]);
     }
+
+    public function getById($id)
+    {
+        $query = 'SELECT * FROM barang WHERE barang_id = ?';
+        return $this->qry($query, [$id])->fetch();
+    }
 }
