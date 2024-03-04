@@ -1,7 +1,9 @@
 <?php
 
-class Routes {
-    public function run () {
+class Routes
+{
+    public function run()
+    {
         $router = new App();
         $router->setDefaultController('HomeController');
         $router->setDefaultMethod('index');
@@ -16,12 +18,13 @@ class Routes {
         $router->get('/dashboard', ['AdminController', 'index']);
         $router->get('/dashboard/index', ['AdminController', 'index']);
 
-
         $router->get('/crud', ['FormController', 'index']);
         $router->get('/crud/index', ['FormController', 'index']);
         $router->get('/crud/insert', ['FormController', 'insert']);
+        $router->get('/crud/edit/{id}', ['FormController', 'edit']);
+        $router->post('/crud/edit_saham', ['FormController', 'edit_saham']);
         $router->post('/crud/insert_saham', ['FormController', 'insert_saham']);
-        
+
         $router->run();
     }
 }
