@@ -5,12 +5,22 @@ class FormModels extends Model
     public function __construct()
     {
         parent::__construct();
+        $this->setTableName('barang');
+        $this->setColumn([
+            'barang_id',
+            'nama_barang',
+            'jumlah',
+            'harga_satuan',
+            'expire_date',
+        ]);
     }
 
     public function getAlls()
     {
-        $query = 'SELECT * FROM barang';
-        return $this->qry($query)->fetchAll();
+        // $query = 'SELECT * FROM barang';
+        // return $this->qry($query)->fetchAll();
+        return $this->get()->fetchAll();
+
     }
 
     public function insert($data)
