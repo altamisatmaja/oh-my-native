@@ -57,4 +57,67 @@ class Model
         }
         return $this->qry($query, $paramValue);
     }
+
+    public function insertData($data = array()){
+        if(empty($data)){
+            return false;
+        }
+        $columnValue = [];
+        $kolom = [];
+        $param = [];
+        foreach ($data as $key => $value){
+            array_push($kolom, $key);
+            array_push($columnValue, $value);
+            array_push($param, "?");
+        }
+
+        $kolom = implode(", ", $kolom);
+        $param = implode(", ", $param);
+        $query = "INSERT INTO {this->tableName} ($kolom) VALUES ($param)";
+        return $this->qry($query, $columnValue);
+    }
+
+    public function updateData($data = array(), $param=array()){
+        if(empty($data)){
+            return false;
+        }
+        $columnValue = [];
+        $kolom = [];
+        $query = "UPDATE INTO {this->tableName}";
+
+        foreach ($data as $key => $value){
+            array_push($kolom, $key ."= ?");
+            array_push($columnValue, $value);
+        }
+
+        $kolom = implode(", ", $kolom);
+        $query = $query." SET $kolom WHERE 1 = 1 ";
+        $whereColumn = [];
+        foreach($param as $key => $value){
+            array_push($whereColumn, "AND {$key} = ?");
+            array_push($columnValue, $value);
+        } 
+        $whereColumn = implode(", ", $whereColumn);
+        $query = $query.$whereColumn;
+        return $this->qry($query, $columnValue);
+    }
+
+    public function deleteData($param = array()){
+        if(empty($param)){
+            return False;
+        }
+
+        $query = "DELETE FROM {$this->tableName} WHERE 1 = 1 ";
+        $whereColumn = [];
+        $columnValue = [];
+        foreach($param as $key => $value){
+            array_push($whereColumn, "AND {$key} = ?");
+            array_push($columnValue, $value);
+        }
+
+        $whereColumn = implode(",", $whereColumn);
+        $query = $query.$whereColumn;
+
+        return $this->qry($query, $columnValue);
+    }
 }
